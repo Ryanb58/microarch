@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  gateway:
+    container_name: gateway
+    image: haproxy:alpine
+    volumes:
+      - "./haproxy:/usr/local/etc/haproxy:ro"
+    ports:
+      - "80:80"
+
